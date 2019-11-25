@@ -14,7 +14,7 @@ const MainNavigator = createStackNavigator({
 {
   defaultNavigationOptions: {
     headerStyle: {
-      backgroundColor:  Colors.primary
+      backgroundColor:  '#1D0B44'
     },
     headerTintColor: 'white' 
   }

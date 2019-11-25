@@ -1,20 +1,16 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-
+import Register from '../components/Register';
 
 
 const RegisterScreen = props => {
-    return(
-        <View>
-            <Text>
-                RegisterScreen
-            </Text>
-        </View>
-    );
+    return<Register onSelect ={() => {
+        props.navigation.navigate({routeName: 'Login'})
+    }}/>;
 };
 
 RegisterScreen.navigationOptions = {
-    headerTiltle: 'Register'
+    headerTitle: "Register"
 };
 const styles = StyleSheet.create({});
 

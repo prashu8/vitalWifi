@@ -22,13 +22,43 @@ const HomePage = props => {
                         source={require('../assets/logo.png')}/>
                     <View style={styles.profile}>
                         <Image 
-                                style={{width: '25%',height: 30, backgroundColor: '#fff', 
-                                    marginBottom: 10, resizeMode: 'contain'}}
-                                source={require('../assets/user.png')}/>
+                            style={{width: 40, 
+                                height: 40, 
+                                backgroundColor: '#fff', 
+                                borderRadius: 20,position: 'absolute', right: 20, top: 20}}
+                            source={require('../assets/user.png')}/>
+                        <View style={{position: 'absolute',bottom: 10, marginLeft: 10}}>
+                            <Text 
+                                style={{color: '#fff',  
+                                    fontSize: 22}}>Welcome.</Text>
+                            <Text 
+                                style={{color: '#fff',  
+                                    fontSize: 22,fontWeight: 'bold'}}>Vital Wi-fi!</Text>
+                            </View>  
+                        </View>
                     </View>
-                </View>
                 
-                <View style={styles.hotelStatus}/>
+                <View style={styles.hotelStatus}>
+                    <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 20}}>
+                        <View>
+                            <Text style={{color: '#fff'}}>check-in</Text>
+                            <Text style={{color: '#fff', fontWeight: 'bold'}}>13/06</Text>
+                        </View>
+                        <Image 
+                            source={require('../assets/forward.png')}/>
+                        <View>
+                            <Text style={{color: '#fff'}}>check-out</Text>
+                            <Text style={{color: '#fff', fontWeight: 'bold'}}>25/06</Text>
+                        </View>
+                        <TouchableOpacity 
+                            style={{width: '30%', justifyContent: 'center',alignItems: 'center', 
+                                alignItems: 'center', height: 35, 
+                                borderRadius: 20, backgroundColor: '#fff'}}>
+                            <Text style={{fontWeight: 'bold'}}>Manage</Text>
+                        </TouchableOpacity>
+                    </View>
+                   
+                </View>
                 <View style={styles.container1}>  
                     <TouchableOpacity style={styles.inputContainer}>
                         <Image 
@@ -40,14 +70,14 @@ const HomePage = props => {
                                 Connectivity</Text>
                         
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.inputContainer}>
+                    <TouchableOpacity style={styles.inputContainer} onPress={props.onSelect}>
                         <Image 
-                            style={{width: '55%',marginBottom: 10, resizeMode: 'contain'}}
-                            source={require('../assets/consult.png')}/>
+                            style={{width: '60%',marginBottom: 10, resizeMode: 'contain'}}
+                            source={require('../assets/edit_user.png')}/>
 
                         <Text 
                             style={{color: '#666666', fontWeight: 'bold',marginTop: 10, fontSize: 20}}>
-                                Consultancy</Text>
+                                Update Profile</Text>
                 
                     </TouchableOpacity>
                 </View>
@@ -88,7 +118,7 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
         width: '45%',
-        height: '90%', 
+        height: '88%', 
         backgroundColor: '#fff',
         borderRadius: 10,
         margin: 10,

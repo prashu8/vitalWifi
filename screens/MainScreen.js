@@ -4,7 +4,9 @@ import HomePage from '../components/HomePage';
  
 
 const MainScreen = props => {
-    return<HomePage/>;
+    return<HomePage onSelect={() => {
+        props.navigation.navigate({routeName: 'Register'});
+    }}/>;
 };
 
 MainScreen.navigationOptions = {
